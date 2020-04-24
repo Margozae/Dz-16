@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hillel home work</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: lightgray;
+            padding-top: 48px;
+            margin: 0;
+        }
+
+        input,
+        button {
+            outline: none;
+            border: none;
+            font-size: 24px;
+            border-radius: 25px;
+            padding: 2px 10px;
+        }
+
+        button {
+
+            background: transparent;
+        }
+
+        form button {
+            color: #fff;
+            background-color: #57b846;
+            margin-left: 50px;
+        }
+
+        .note-list {
+            margin-top: 48px;
+            font-size: 20px;
+            list-style: none;
+        }
+
+        .note-list button {
+            font-size: 12px;
+            line-height: 1.5;
+            color: white;
+            text-transform: uppercase;
+
+            border-radius: 25px;
+            background: #57b846;
+            padding: 5px 10px 5px 10px;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background: #333333;
+        }
+
+        .note-list__item.note-list__item--completed label {
+            color: grey;
+            text-decoration: line-through;
+        }
+
+        li {
+            display: flex;
+            height: 31px;
+            margin-bottom: 12px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid gray;
+        }
+
+        input:focus {
+            border-color: transparent;
+        }
+
+        li label {
+            min-width: 300px;
+            padding: 2px 10px;
+            font-size: 24px;
+            border-radius: 25px;
+        }
+
+        ul li input[type=text] {
+            display: none;
+        }
+
+        ul li.editMode input[type=text] {
+            display: block;
+        }
+
+        ul li.editMode label {
+            display: none;
+        }
+
+        button:disabled {
+            color: lightgray;
+            background: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <input type="text" placeholder="Enter your note">
+        <button type="submit">Add note</button>
+    </form>
+    <ul class="note-list">
+    </ul>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
